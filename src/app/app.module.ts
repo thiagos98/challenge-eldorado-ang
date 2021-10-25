@@ -14,8 +14,6 @@ import { MatListModule } from "@angular/material/list";
 import { HomeComponent } from "./views/home/home.component";
 import { DeviceCrudComponent } from "./views/device-crud/device-crud.component";
 import { CategoryCrudComponent } from "./views/category-crud/category-crud.component";
-import { RedDirective } from "./directives/red.directive";
-import { ForDirective } from "./directives/for.directive";
 import { DeviceCreateComponent } from "./components/device/device-create/device-create.component";
 import { CategoryCreateComponent } from "./components/category/category-create/category-create.component";
 import { MatButtonModule } from "@angular/material/button";
@@ -28,10 +26,11 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { CategoryReadComponent } from './components/category/category-read/category-read.component';
 import { DeviceReadComponent } from './components/device/device-read/device-read.component';
-import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { CategoryDeleteComponent } from './components/category/category-delete/category-delete.component';
+import { DeviceDeleteComponent } from './components/device/device-delete/device-delete.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +41,12 @@ import { MatSortModule } from '@angular/material/sort';
     HomeComponent,
     DeviceCrudComponent,
     CategoryCrudComponent,
-    RedDirective,
-    ForDirective,
     DeviceCreateComponent,
     CategoryCreateComponent,
     CategoryReadComponent,
     DeviceReadComponent,
-    ProductReadComponent,
+    CategoryDeleteComponent,
+    DeviceDeleteComponent,
   ],
   imports: [
     BrowserModule,

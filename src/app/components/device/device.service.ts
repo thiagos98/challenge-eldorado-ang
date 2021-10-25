@@ -12,11 +12,12 @@ export class DeviceService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
-  showMessage(msg: string): void {
+  showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, "x", {
       duration: 3000,
       horizontalPosition: "right",
       verticalPosition: "top",
+      panelClass: isError ? ['msg-error'] : ['msg-success']
     });
   }
 
@@ -26,5 +27,15 @@ export class DeviceService {
 
   read(): Observable<Device[]> {
     return this.http.get<Device[]>(this.baseUrl);
+  }
+
+  readById(id: string): Observable<Device> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Device>(url);
+  }
+
+  delete(id: string): Observable<Device> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Device>(url);
   }
 }

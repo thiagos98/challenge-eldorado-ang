@@ -12,11 +12,12 @@ export class CategoryService {
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
-  showMessage(msg: string): void {
+  showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, "x", {
       duration: 3000,
       horizontalPosition: "right",
       verticalPosition: "top",
+      panelClass: isError ? ['msg-error'] : ['msg-success']
     });
   }
 
@@ -26,5 +27,15 @@ export class CategoryService {
 
   read(): Observable<Category[]> {
     return this.http.get<Category[]>(this.baseUrl);
+  }
+
+  readById(id: string): Observable<Category> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Category>(url);
+  }
+
+  delete(id: string): Observable<Category> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<Category>(url);
   }
 }

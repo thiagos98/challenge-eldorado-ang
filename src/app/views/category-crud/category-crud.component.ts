@@ -16,10 +16,7 @@ export class CategoryCrudComponent implements OnInit {
   }
 
   navigateToCategoryCreate():void {
-    console.log("navegando ate categoria");
-
     this.router.navigate(['/categories/create']);
-    
   }
 
 }
