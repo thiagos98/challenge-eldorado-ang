@@ -12,10 +12,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .msg-success {
-  background-color: rgb(78, 179, 111);
+  background-color: #4eb36f;
   color: #fff;
 }
 .msg-error {
-  background-color: rgb(78, 179, 111);
+  background-color: #e35e6b;
   color: #fff;
 }
