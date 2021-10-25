@@ -1,16 +1,16 @@
 <mat-toolbar class="header mat-elevation-z4">
   <span>
-    <a>
-      <img class="logo" src="assets/logo/angular.png" alt="logo">
+    <a routerLink="/">
+      <img class="logo" src="assets/logo/angular.png" alt="logo" />
     </a>
   </span>
 
   <span class="title-group">
-    <a>
-      <i class="material-icons">
-        home
+    <a routerLink="{{ routerUrl }}">
+      <i class="material-icons"> 
+        {{ icon }}
       </i>
-      Aplicação CRUD
+      {{ title }}
     </a>
   </span>
 </mat-toolbar>

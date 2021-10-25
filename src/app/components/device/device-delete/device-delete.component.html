@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-title> Excluir Dispositivo </mat-card-title>
+
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Cor"
+        [value]="device.color"
+        name="color"
+        disabled
+      />
+    </mat-form-field>
+  </form>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Part Number"
+        [value]="device.part_number"
+        name="part_number"
+        disabled
+      />
+    </mat-form-field>
+  </form>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Category"
+        [value]="device.category_id"
+        name="category_id"
+        disabled
+      />
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="deleteDevice()" color="warn">
+    Delete
+  </button>
+  <button mat-raised-button (click)="cancel()">Cancel</button>
+</mat-card>
