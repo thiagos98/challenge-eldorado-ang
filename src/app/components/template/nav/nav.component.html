@@ -1,1 +1,29 @@
-<p>nav works!</p>
+<mat-sidenav-container class="container">
+
+  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">
+          home
+        </i>
+        Início
+      </a>
+      <a mat-list-item routerLink="/devices">
+        <i class="material-icons">
+          redeem
+        </i>
+        Device
+      </a>
+      <a mat-list-item routerLink="/categories">
+        <i class="material-icons">
+          support
+        </i>
+        Category
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
