@@ -1,7 +1,23 @@
-<button mat-raised-button (click)="createDevice()" color="primary">
-  To Save
-</button>
+<mat-card>
+  <mat-card-title>
+    New Device 
+  </mat-card-title>
+  
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Color" type="text" [(ngModel)]="device.color" name="color">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Part Number" type="number" [(ngModel)]="device.part_number" name="part_number">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Category Id" type="number" [(ngModel)]="device.category_id" name="category_id">
+    </mat-form-field>
+  </form>
+  
+  <button mat-raised-button (click)="createDevice()" color="primary">
+    To Save
+  </button>
 
-<button mat-raised-button (click)="cancel()">
-  Cancel
-</button>
+  <button mat-raised-button (click)="cancel()">Cancel</button>
+</mat-card>

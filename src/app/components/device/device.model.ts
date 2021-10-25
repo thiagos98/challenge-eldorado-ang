@@ -1,6 +1,8 @@
 export interface Device {
   id?: number
-  category: number
   color: string
-  partNumber: number
+  part_number: number,
+  category_id: number
+  createdAt: Date,
+  updatedAt: Date
 }
