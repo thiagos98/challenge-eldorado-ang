@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
@@ -10,7 +11,7 @@ import { map, catchError } from "rxjs/operators";
   providedIn: "root",
 })
 export class CategoryService {
-  baseUrl = "http://localhost:3001/category";
+  baseUrl = `${environment.API_URL}/category`;
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 

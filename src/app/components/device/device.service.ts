@@ -4,13 +4,14 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 import { Device } from "./device.model";
 import { Observable,EMPTY } from "rxjs";
 import { map, catchError } from 'rxjs/operators';
+import { environment } from "src/environments/environment";
 
 
 @Injectable({
   providedIn: "root",
 })
 export class DeviceService {
-  baseUrl = `http://localhost:3001/device`;
+  baseUrl = `${environment.API_URL}/device`;
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
